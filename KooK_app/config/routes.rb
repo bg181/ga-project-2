@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :restaurants do
+	  resources :bookings
+	end
   root "gossip#index"
   get "public", to: "gossip#index"
   get "secret", to: "secret#index"
