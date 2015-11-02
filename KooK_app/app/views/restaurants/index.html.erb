@@ -1,16 +1,20 @@
+<div class="card-columns">
 <div class="row">
   <div class="card-deck-wrapper">
     <div class="card-deck">
       <% @restaurants.each do |restaurant| %>
         <div class="card">
-          <%= image_tag restaurant.picture, class: "card-img-top" %> 
+          <%= image_tag restaurant.picture, class: "card-img-top"  %>
           <div class="card-block">
-            <h4 class="card-title"><%= link_to restaurant.name, restaurant %> by <%= restaurant.user.try(:username) %></h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <%= link_to "Book Space", restaurant, class: "btn btn-primary" %>
+            <h4 class="card-tag-line"><%= link_to restaurant.name, restaurant %></h4>
+            <p class="card-text">£<%=restaurant.price%></p>
+            <%= image_tag restaurant.user.try(:image), class: "profile_photo_owner" %>
           </div>
+
         </div>
       <% end %>
     </div>
   </div>
 </div>
+
+

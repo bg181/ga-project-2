@@ -28,3 +28,47 @@
     margin-left: 0;
 /*    background-color: green;
 */}
+
+.add_restaurant_form{
+  list-style-type: none;
+}
+
+.profile_photo{
+    width: 56px;
+    height:56px;
+
+    border-radius: 75px;
+}
+
+.card-block{
+    width:301px;
+}
+
+.card-columns .card, .progress {
+    width: 401px;
+}
+
+.card-img-top {
+    max-width: 401px;
+    max-height: 267.25px;
+    position: relative;
+    }
+
+img {
+        width: 350px;
+        height: 267px;
+        border: 20px;
+        border-color: white;
+    }
+
+    .profile_photo_owner{
+        width: 56px;
+        height:56px;
+        border-radius: 75px;
+        background-color: white;
+        border: 20px;
+        position: absolute;
+        top: 235px;
+        right: 60px;
+
+    }
