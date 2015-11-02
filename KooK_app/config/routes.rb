@@ -1,12 +1,9 @@
 Rails.application.routes.draw do
+  root "restaurants#index"
+
   resources :restaurants do
 	  resources :bookings
 	end
-  root "gossip#index"
-  get "public", to: "gossip#index"
-  get "secret", to: "secret#index"
-  get "really_secret", to: "secret#really_secret"
-
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

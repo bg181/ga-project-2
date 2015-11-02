@@ -13,12 +13,10 @@
   </div>
 <% end %>
 
-<div class='login'>
-  <% if current_user %>
-     <%= current_user.email %>
-     <%= link_to "Log out", destroy_user_session_path, method: :delete %>
-  <% end %>
-</div>
+
+<a href="">Sign Up</a> 
+
+//If logged in just add a property - if not sign up//
 
 <%= yield %>
 
