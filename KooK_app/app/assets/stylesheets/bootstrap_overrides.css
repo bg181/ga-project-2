@@ -1,3 +1,30 @@
 .card-img-top {
   max-width: 260px;
 }
+
+.dropdown-toggle:after {
+/*    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: .25rem;
+    vertical-align: middle;
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-left: .3em solid transparent;*/
+    display: none;
+
+}
+
+.btn-group, .btn-group-vertical {
+    display: none;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+}
+
+.btn .caret, .btn-group>.btn:first-child {
+    margin-left: 0;
+/*    background-color: green;
+*/}

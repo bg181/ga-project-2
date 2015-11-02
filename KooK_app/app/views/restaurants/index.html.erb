@@ -5,7 +5,7 @@
         <div class="card">
           <%= image_tag restaurant.picture, class: "card-img-top" %> 
           <div class="card-block">
-            <h4 class="card-title"><%= link_to restaurant.name, restaurant %></h4>
+            <h4 class="card-title"><%= link_to restaurant.name, restaurant %> by <%= restaurant.user.try(:username) %></h4>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             <%= link_to "Book Space", restaurant, class: "btn btn-primary" %>
           </div>

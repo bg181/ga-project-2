@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151031134009) do
+ActiveRecord::Schema.define(version: 20151102100610) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,11 +26,14 @@ ActiveRecord::Schema.define(version: 20151031134009) do
   add_index "bookings", ["restaurant_id"], name: "index_bookings_on_restaurant_id", using: :btree
 
   create_table "restaurants", force: :cascade do |t|
-    t.string "name"
-    t.text   "description"
-    t.text   "picture"
-    t.text   "price"
+    t.string  "name"
+    t.text    "description"
+    t.text    "picture"
+    t.text    "price"
+    t.integer "user_id"
   end
+
+  add_index "restaurants", ["user_id"], name: "index_restaurants_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "role"
@@ -54,4 +57,5 @@ ActiveRecord::Schema.define(version: 20151031134009) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   add_foreign_key "bookings", "restaurants"
+  add_foreign_key "restaurants", "users"
 end
