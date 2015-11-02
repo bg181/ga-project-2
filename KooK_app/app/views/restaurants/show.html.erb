@@ -1,8 +1,14 @@
-<h2><%= @restaurant.name %></h2>
-<%= @restaurant.name %>
-<%= @restaurant.description %>
-<%= @restaurant.price %>
-<%= link_to "Show all bookings", restaurant_bookings_path(@restaurant) %>
-<%= link_to "Add booking", new_restaurant_booking_path(@restaurant) %>
-<%= link_to "Delete", restaurant_path(@restaurant), data: { confirm: 'Are you sure?' }, method: :delete %>
-<%= link_to "Edit", edit_restaurant_path(@restaurant) %>
+
+<li><%= image_tag @restaurant.picture, class: "gui" %></li>
+<%= image_tag @restaurant.user.try(:image), class: "profile_photo_owner_show" %>
+<li class="restaurant_info">
+<div class= "restaurant_info_inside">
+<h2 class ="restaurant_title"><%= @restaurant.name %></h2>
+<p class ="restaurant description"> <%= @restaurant.description %></p>
+<p class ="restaurant price"> <%= @restaurant.price %></p>
+<p class ="Show bookings"> <%= link_to "Show all bookings", restaurant_bookings_path(@restaurant) %></p>
+<p class= "Add button"> <%= link_to "Add booking", new_restaurant_booking_path(@restaurant) %></p>
+<p class= "Delete button"><%= link_to "Delete", restaurant_path(@restaurant), data: { confirm: 'Are you sure?' }, method: :delete %></p>
+<p class= "Edit button"><%= link_to "Edit", edit_restaurant_path(@restaurant) %></p>
+</div>
+</li>

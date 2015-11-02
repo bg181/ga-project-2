@@ -1,14 +1,15 @@
 <%= form_for @restaurant do |f| %>
   <%= render 'errors' %>
   <ul class="add_restaurant_form">
-  <li><%= f.label 'name', 'Tag Line' %>
-  <%= f.text_field 'name', placeholder: 'Tag Line'%></li>
-  <li><%= f.label 'price/night', 'Price' %>
-  <%= f.number_field 'price', placeholder: 'Price'%></li>
- <li> <%= f.label 'description', 'Description' %>
-  <%= f.text_field 'description', placeholder: 'Description'%></li>
-  <li> <%= f.label 'picture', 'Picture' %>
-   <%= f.text_field 'picture', placeholder: 'Picture'%></li>
-  <%= f.submit 'Submit' %>
+  <li><%= f.label 'name', 'Tag Line' %></li>
+  <%= f.text_field 'name', maxlength: '39', placeholder: 'Tag Line' %>
+  <li><%= f.label 'price/night', 'Price' %></li>
+  <%= f.number_field 'price', placeholder: 'Price'%>
+ <li> <%= f.label 'description', 'Description' %></li>
+  <%= f.text_field 'description', placeholder: 'Description'%>
+  <li> <%= f.label 'picture', 'Picture' %></li>
+   <%= f.text_field 'picture', placeholder: 'Picture'%>
+  
+  <li><%= f.submit 'Submit' %></li>
   </ul>
 <% end %>
