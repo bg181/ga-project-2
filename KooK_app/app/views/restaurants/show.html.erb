@@ -2,6 +2,7 @@
 <%= @restaurant.name %>
 <%= @restaurant.description %>
 <%= @restaurant.price %>
-
+<%= link_to "Show all bookings", restaurant_bookings_path(@restaurant) %>
+<%= link_to "Add booking", new_restaurant_booking_path(@restaurant) %>
 <%= link_to "Delete", restaurant_path(@restaurant), data: { confirm: 'Are you sure?' }, method: :delete %>
 <%= link_to "Edit", edit_restaurant_path(@restaurant) %>

@@ -8,17 +8,8 @@
 </head>
 <body>
   <header>
-    <nav>
-      <ul>
-        <li><%= link_to "Kook", root_path %></li>
-        <li><%= link_to "Browse Spaces", restaurants_path %></li>
-        <% if user_signed_in? %>
-          <% else %>
-        <% end %>
-      </ul>
-    </nav>
+    <%= render "navigation" %>
   </header>
-
 
 <% flash.each do |name, message| %>
   <div class="flash-message flash-message-<%= name %>">
@@ -26,12 +17,10 @@
   </div>
 <% end %>
 
+<main class="container">
+  <%= yield %>
+</main>
 
-<a href="">Sign Up</a> 
-
-//If logged in just add a property - if not sign up//
-
-<%= yield %>
-
+<footer></footer>
 </body>
 </html>

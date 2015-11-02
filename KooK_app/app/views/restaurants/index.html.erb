@@ -1,9 +1,16 @@
-<h3>restaurants</h3>
-
-<% @restaurants.each do |restaurant| %>
-  <div class="restaurant">
-    <%= link_to restaurant.name, restaurant %>
-    <%= link_to "Show all bookings", restaurant_bookings_path(restaurant) %>
-    <%= link_to "Add booking", new_restaurant_booking_path(restaurant) %>
+<div class="row">
+  <div class="card-deck-wrapper">
+    <div class="card-deck">
+      <% @restaurants.each do |restaurant| %>
+        <div class="card">
+          <%= image_tag restaurant.picture, class: "card-img-top" %> 
+          <div class="card-block">
+            <h4 class="card-title"><%= link_to restaurant.name, restaurant %></h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <%= link_to "Book Space", restaurant, class: "btn btn-primary" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
   </div>
-<% end %>
+</div>
