@@ -26,68 +26,68 @@ var calendar = function(){
     };
 
     $('#calendar').fullCalendar({
-        header: {
-				left: 'prev,next today',
-				center: 'title',
-				right: 'month,agendaWeek,agendaDay'
-			},
+      header: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'month,agendaWeek,agendaDay'
+      },
 
-			eventSources: [{  
-    		url: '/restaurants/'+current_resource()+'/bookings/',  
-   		}],
+      eventSources: [{  
+        url: '/restaurants/'+current_resource()+'/bookings/',  
+      }],
 
-   		selectable: {
-      month: false,
-      agenda: true
-   	}	,
+      selectable: {
+        month: false,
+        agenda: true
+      }	,
 
-    editable: true,
-    eventStartEditable: true, 
-    eventDurationEditable: true,
+      editable: true,
+      eventStartEditable: true, 
+      eventDurationEditable: true,
 
-    eventDrop: function(booking) {
-      var length = (booking.end-booking.start)/(3600000);
+      eventDrop: function(booking) {
+        var length = (booking.end-booking.start)/(3600000);
 
         function updateEvent(booking) {
-              $.ajax(
-                '/restaurants/'+current_resource()+'/bookings/'+booking.id,
-                { 'type': 'PATCH',
+          $.ajax(
+            '/restaurants/'+current_resource()+'/bookings/'+booking.id,
+            { 'type': 'PATCH',
 
-                  data: { booking: { 
-                           start_time: "" + booking.start,
-                           length: length
-                         } }
-                }
-              );
-          };
+            data: { booking: { 
+             start_time: "" + booking.start,
+             length: length
+           } }
+         }
+         );
+        };
 
         updateEvent(booking);
 
       }
-    ,
+      ,
 
-    eventResize: function(booking) {
-      var length = (booking.end-booking.start)/(3600000);
+      eventResize: function(booking) {
+        var length = (booking.end-booking.start)/(3600000);
 
         function updateEvent(booking) {
-              $.ajax(
-                '/restaurants/'+current_resource()+'/bookings/'+booking.id,
-                { 'type': 'PATCH',
+          $.ajax(
+            '/restaurants/'+current_resource()+'/bookings/'+booking.id,
+            { 'type': 'PATCH',
 
-                  data: { booking: { 
-                           start_time: "" + booking.start,
-                           length: length
-                         } }
-                }
-              );
-          };
+            data: { booking: { 
+             start_time: "" + booking.start,
+             length: length
+           } }
+         }
+         );
+        };
 
         updateEvent(booking);
 
       }
-    ,
+      ,
 
-   	dayClick: function(date, allDay, jsEvent, view) {
+      dayClick: function(date, allDay, jsEvent, view) {
       // console.log(view.name);
       if (view.name === "month") { 
         $('#calendar').fullCalendar('gotoDate', date);
@@ -96,17 +96,17 @@ var calendar = function(){
     }
     ,
 
- 		select: function(start, end, allDay) {
+    select: function(start, end, allDay) {
       if (window.location.href.match(/new/)) {
         if(today_or_later()) {
         	var length = (end-start)/(3600000);
 
           $('#calendar').fullCalendar('renderEvent', 
-            {
-              start: start,
-              end: end,
-              allDay: false
-            }
+          {
+            start: start,
+            end: end,
+            allDay: false
+          }
           );
 
           jQuery.post(
@@ -116,15 +116,15 @@ var calendar = function(){
               start_time: start,
               length: length,
 
-          	} }
-          );
+            } }
+            );
 
-    	    } else {
+        } else {
             // alert("help!");
+          }
         }
       }
-    }
 
-	});
+    });
 
 };

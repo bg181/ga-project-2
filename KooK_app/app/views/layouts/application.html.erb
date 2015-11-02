@@ -7,6 +7,19 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
+    <nav>
+      <ul>
+        <li><%= link_to "Kook", root_path %></li>
+        <li><%= link_to "Browse Spaces", restaurants_path %></li>
+        <% if user_signed_in? %>
+          <% else %>
+        <% end %>
+      </ul>
+    </nav>
+  </header>
+
+
 <% flash.each do |name, message| %>
   <div class="flash-message flash-message-<%= name %>">
     <%= message %>
