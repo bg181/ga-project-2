@@ -3,4 +3,7 @@ class Restaurant < ActiveRecord::Base
 
   has_many :bookings
   belongs_to :user
+
+  mount_uploader :profile_photos, ProfilePhotosUploader
+
 end
