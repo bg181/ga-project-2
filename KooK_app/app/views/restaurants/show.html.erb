@@ -1,6 +1,6 @@
 
 <li><%= image_tag @restaurant.picture, class: "gui" %></li>
-<%= image_tag @restaurant.user.try(:image), class: "profile_photo_owner_show" %>
+<%= image_tag @restaurant.user.try(:profile_photos), class: "profile_photo_owner_show" %>
 <li class="restaurant_info">
 <div class= "restaurant_info_inside">
 <h2 class ="restaurant_title"><%= @restaurant.name %></h2>
