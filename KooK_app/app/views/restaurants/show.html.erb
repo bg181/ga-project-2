@@ -7,11 +7,18 @@
 <p class ="restaurant description"> <%= @restaurant.description %></p>
 <p class ="restaurant price"> <%= @restaurant.price %></p>
 <p class ="Show bookings"> <%= link_to "Show all bookings", restaurant_bookings_path(@restaurant) %></p>
-<p class= "Add button"> <%= link_to "Add booking", new_restaurant_booking_path(@restaurant) %></p>
-<p class= "Delete button"><%= link_to "Delete", restaurant_path(@restaurant), data: { confirm: 'Are you sure?' }, method: :delete %></p>
-<p class= "Edit button"><%= link_to "Edit", edit_restaurant_path(@restaurant) %></p>
-</div>
-</li>
+<p class="Add button"> <%= link_to "Add booking", new_restaurant_booking_path(@restaurant) %></p>
+
+
+
+<% if current_user %>
+  <% if current_user.id == @restaurant.user_id %>
+    <p class= "Delete button"><%= link_to "Delete", restaurant_path(@restaurant), data: { confirm: 'Are you sure?' }, method: :delete %></p>
+    <p class= "Edit button"><%= link_to "Edit", edit_restaurant_path(@restaurant) %></p>
+    </div>
+    </li>
+  <% end %>
+<% end %>
 
 
 

@@ -5,4 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :restaurants
+
+  mount_uploader :profile_photos, ProfilePhotosUploader
+
 end

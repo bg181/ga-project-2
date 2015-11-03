@@ -1,4 +1,5 @@
 class RestaurantsController < ApplicationController
+  load_and_authorize_resource
 
   def index
     @restaurants = Restaurant.all

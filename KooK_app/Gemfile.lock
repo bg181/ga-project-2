@@ -45,6 +45,12 @@ GEM
       rails_12factor
     builder (3.2.2)
     byebug (6.0.2)
+    cancan (1.6.10)
+    carrierwave (0.10.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
+      mime-types (>= 1.16)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -62,6 +68,9 @@ GEM
       warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.6.0)
+    gdata-c2dm (0.0.2)
+      gdata_19
+    gdata_19 (1.1.5)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     i18n (0.7.0)
@@ -78,6 +87,7 @@ GEM
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
     mime-types (2.6.2)
+    mini_magick (4.3.6)
     mini_portile (0.6.2)
     minitest (5.8.2)
     multi_json (1.11.2)
@@ -162,10 +172,14 @@ PLATFORMS
 DEPENDENCIES
   bookable (~> 0.0.52)
   byebug
+  cancan
+  carrierwave
   coffee-rails (~> 4.1.0)
   devise
+  gdata-c2dm
   jbuilder (~> 1.2)
   jquery-rails
+  mini_magick
   pg
   rails (= 4.2.4)
   sass-rails (~> 5.0)

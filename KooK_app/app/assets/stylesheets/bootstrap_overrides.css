@@ -33,6 +33,10 @@ nav {
     font-size: 24px;
 }
 
+.card {
+    border: none;
+}
+
 .profile_photo_owner_show{
     margin-left: 150px;
     margin-top: 580px;
@@ -83,6 +87,8 @@ nav {
         .card-img-top {
           max-width: 260px;
         }
+
+
 
             .card-text{
             opacity: 0.9;
