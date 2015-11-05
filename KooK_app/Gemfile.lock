@@ -71,6 +71,7 @@ GEM
     gdata-c2dm (0.0.2)
       gdata_19
     gdata_19 (1.1.5)
+    geocoder (1.2.12)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     i18n (0.7.0)
@@ -177,6 +178,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   devise
   gdata-c2dm
+  geocoder
   jbuilder (~> 1.2)
   jquery-rails
   pg

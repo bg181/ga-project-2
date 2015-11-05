@@ -1,5 +1,4 @@
 class RestaurantsController < ApplicationController
-  load_and_authorize_resource
 
   def index
     @restaurants = Restaurant.all
@@ -49,7 +48,9 @@ class RestaurantsController < ApplicationController
   private
 
     def restaurant_params
-      params.require(:restaurant).permit(:name, :description, :price, :picture)
+      params.require(:restaurant).permit(:name, :description, :price, :picture, :street_number, :street_name, :city, :country, :postcode)
     end
+
+
 
 end

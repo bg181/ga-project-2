@@ -1,6 +1,7 @@
 <%= form_for @restaurant do |f| %>
   <%= render 'errors' %>
-  <ul class="add_restaurant_form">
+  <div>
+  <ul class="add_restaurant_form_main">
   <li><%= f.label 'name', 'Tag Line' %></li>
   <%= f.text_field 'name', maxlength: '39', placeholder: 'Tag Line' %>
   <li><%= f.label 'price/night', 'Price' %></li>
@@ -9,7 +10,71 @@
   <%= f.text_field 'description', placeholder: 'Description'%>
   <li> <%= f.label 'picture', 'Picture' %></li>
    <%= f.file_field 'picture', placeholder: 'Picture'%>
-  
-  <li><%= f.submit 'Submit' %></li>
+   </ul>
+   </div>
+  <hr>
+  <div>
+  <ul class="add_restaurant_form_address">
+  <li> Address</li>
+  <hr>
+  <li> <%= f.label 'street_number', 'Street_number' %></li>
+  <%= f.text_field 'street_number', placeholder: 'Street_number'%>
+  <li> <%= f.label 'street_name', 'Street_name' %></li>
+  <%= f.text_field 'street_name', placeholder: 'Street_name'%>
+  <li> <%= f.label 'city', 'City' %></li>
+  <%= f.text_field 'city', placeholder: 'City'%>
+  <li> <%= f.label 'country', 'Country' %></li>
+  <%= f.text_field 'country', placeholder: 'Country'%>
+  <li> <%= f.label 'postcode', 'Postcode' %></li>
+  <%= f.text_field 'postcode', placeholder: 'Postcode'%>
+  <hr>
   </ul>
+
+  <div>
+  <ul class="opening_times">
+  <li> Address</li>
+  <hr>
+  <li> <%= f.label 'monday_open', 'Monday_open' %></li>
+  <%= f.text_field 'monday_open', placeholder: 'Monday_open'%>
+  <li> <%= f.label 'tuesday_open', 'tuesday_open' %></li>
+  <%= f.text_field 'tuesday_open', placeholder: 'tuesday_open'%>
+  <li> <%= f.label 'wednesday_open', 'Wednesday_open' %></li>
+  <%= f.text_field 'wednesday_open', placeholder: 'Wednesday_open'%>
+  <li> <%= f.label 'thursday_open', 'Thursday_open' %></li>
+  <%= f.text_field 'thursday_open', placeholder: 'Thursday_open'%>
+  <li> <%= f.label 'friday_open', 'Friday_open' %></li>
+  <%= f.text_field 'friday_open', placeholder: 'Friday_open'%>
+  <li> <%= f.label 'saturday_open', 'Saturday_open' %></li>
+  <%= f.text_field 'saturday_open', placeholder: 'Saturday_open'%>
+  <li> <%= f.label 'sunday_open', 'Sunday_open' %></li>
+  <%= f.text_field 'sunday_open', placeholder: 'Sunday_open'%>
+  <hr>
+  </ul>
+
+
+
+  </div>
+<div>
+  <li><%= f.submit 'Submit' %></li>
+</div>
 <% end %>
+
+
+t.time    "monday_open"
+t.time    "monday_close"
+t.time    "tuesday_open"
+t.time    "tuesday_close"
+t.time    "wednesday_open"
+t.time    "wednesday_close"
+t.time    "thursday_open"
+t.time    "thursday_close"
+t.time    "friday_open"
+t.time    "friday_close"
+t.time    "saturday_open"
+t.time    "saturday_close"
+t.time    "sunday_open"
+
+
+
+
+

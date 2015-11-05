@@ -9,6 +9,34 @@
 <p class ="Show bookings"> <%= link_to "Show all bookings", restaurant_bookings_path(@restaurant) %></p>
 <p class="Add button"> <%= link_to "Add booking", new_restaurant_booking_path(@restaurant) %></p>
 
+<table width="980" style="width:300px;border-width:0px;">
+<tr>
+<td width="109" style="width:93px;border-width:0px;text-align:left;">
+<table style="width:182px; border-width:0px;">
+<tr>
+<td style="width:169px;border-width:0px;">Opening Hours</td>
+</tr>
+</table>
+<br>
+<h4>Monday<br>
+Tuesday<br>
+Wednesday<br>
+Thursday<br>
+Friday<br>
+Saturday</h4>
+</td>
+<td width="179" style="width:104px;border-width:0px;float:left;margin-top: 13px;">
+<table style="width:104px;border-width:0px;"></table>
+<br>
+<h4>9am - 5pm<br>
+9am - 5pm<br>
+9am - 5pm<br>
+9am - 5pm<br>
+9am - 5pm<br>
+9am - 5pm</h4>
+</td>
+</tr>
+</table>
 
 
 <% if current_user %>
