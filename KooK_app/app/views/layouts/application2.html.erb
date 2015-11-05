@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prep</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header>
+    <%= render "navigation" %>
+  </header>
+
+  <% flash.each do |name, message| %>
+    <div class="container flash-message flash-message-<%= name %>">
+      <%= message %>
+    </div>
+  <% end %>
+
+<main class="container">
+  <%= yield %>
+</main>
+
+<footer></footer>
+</body>
+</html>

@@ -1,26 +1,28 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Prep</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <header>
-    <%= render "navigation" %>
-  </header>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= content_for?(:title) ? yield(:title) : "Prep" %></title>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <header>
+      <%= render "navigation" %>
+    </header>
 
-  <% flash.each do |name, message| %>
-    <div class="container flash-message flash-message-<%= name %>">
-      <%= message %>
-    </div>
-  <% end %>
+    <% flash.each do |name, message| %>
+      <div data-alert class="row alert-box secondary container flash-message flash-message-<%= name %>">
+        <%= message %>
+      </div>
+    <% end %>
 
-<main class="container">
-  <%= yield %>
-</main>
+    <main>
+      <%= yield %>
+    </main>
 
-<footer></footer>
-</body>
+  </body>
 </html>
