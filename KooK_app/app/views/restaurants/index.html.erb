@@ -1,50 +1,48 @@
-<div style="position:fixed; right:0px;" id="indexMap" ></div>
-
-
-
-    <script type="text/javascript">
-
-var map;
-function initMap() {
-  map = new google.maps.Map(document.getElementById('indexMap'), {
-    center: {lat: 51.5072, lng: 0.1275},
-    zoom: 10
-  });
-}
-
-    </script>
-
-    <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClxb-Zn1rpl0SvSeqRNipsFNi_5syF-kQ&callback=initMap">
-    </script>
-
-    <div class="card-deck">
-      <% @restaurants.each do |restaurant| %>
-        <div class="card">
-          <%= image_tag restaurant.picture.url, class: "card-img-top"  %>
-          <div class="card-block">
-            <h4 class="card-tag-line"><%= link_to restaurant.name, restaurant %></h4>
-            <p class="card-text">£<%=restaurant.price%></p>
-            <%= image_tag restaurant.user.image.thumb, class: "profile_photo_owner" %>
+<div class="container">
+  <div class="col-lg-6">
+    <div class="card-deck-wrapper">
+      <div class="card-deck">
+        <% @restaurants.each do |restaurant| %>
+          <div class="card">
+            <%= image_tag restaurant.picture.url, class: "card-img-top"  %>
+            <div class="card-block">
+              <h4 class="card-tag-line"><%= link_to restaurant.name, restaurant %></h4>
+              <p class="card-text">£<%=restaurant.price%></p>
+              <%= image_tag restaurant.user.image.thumb, class: "profile_photo_owner" %>
+            </div>
           </div>
-        </div>
-        </div>
-  
-        <script type="text/javascript">
-             var latLng = {lat: <%= restaurant.latitude %>, lng: <%= restaurant.longitude%>}
-             function markMarkers(){
-               marker = new google.maps.Marker({
-                 position: latLng,
-                 map: map,
-                 title: 'Hello World!',
-                 icon: "http://cdn.leafletjs.com/leaflet-0.4/images/marker-icon.png"
-               });
-             }
-             markMarkers()
-           </script>
-      <% end %>
+          <script type="text/javascript">
+            var latLng = {lat: <%= restaurant.latitude %>, lng: <%= restaurant.longitude%>}
+            function markMarkers(){
+              marker = new google.maps.Marker({
+                position: latLng,
+                map: map,
+                title: 'Hello World!',
+                icon: "http://cdn.leafletjs.com/leaflet-0.4/images/marker-icon.png"
+              });
+            }
+            markMarkers()
+          </script>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <%= paginate @restaurants %>
+  <div class="col-lg-6">
+    <div style="width:100%; position:fixed; right: 0;" id="indexMap"></div>
+  </div>
+</div>
 
-    <%= paginate @restaurants %>
-
-
+<script type="text/javascript">
+  var map;
+  function initMap() {
+    map = new google.maps.Map(document.getElementById('indexMap'), {
+      center: {lat: <%= @restaurants.first.latitude %>, lng: <%= @restaurants.first.longitude %>},
+      zoom: 10
+    });
+  }
+</script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClxb-Zn1rpl0SvSeqRNipsFNi_5syF-kQ&callback=initMap">
+</script>
 

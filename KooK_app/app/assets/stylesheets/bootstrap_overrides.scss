@@ -11,16 +11,34 @@ html {
   color: f5f5f5;
 }
 
+table{
+  padding: 20px;
+}
+
 a {
   color: black;
+}
+
+.profile_photo{
+  display: centre;
 }
 
 .dropdown-menu{
   background: white;
 }
 
-.card-deck{
-  width: 350px;
+// .card{
+//   padding-left: 20px;
+// }
+
+p.card-text{
+  left: 20px;
+}
+
+.card-deck {
+  display: table;
+  table-layout: fixed;
+  border-spacing: 0px;
 }
 
 .main-container{
@@ -28,25 +46,19 @@ a {
   padding: 0%;
   margin: 0%;
 }
-.navbar-nav .nav-item {
-    right: 50px;
-    top: -60px;
-}
 
 .pull-right nav-item.dropdown{
   right: 200px;
 }
 
-.nav-item{
+.closing_times{
+  float: left;
+  display: inline-block;
 }
 
-.closing_times{
-float: left;
-display: inline-block;
-}
 .opening_times{
-float: left;
-display: inline-block;
+  float: left;
+  display: inline-block;
 }
 
 .restaurant_info_inside {
@@ -116,12 +128,10 @@ nav {
 
 .card {
   border: none;
-  width: 350px;
 }
 
 .card-deck {
   border: none;
-  width: 350px;
 }
 
 .profile_photo_owner_show {
@@ -168,156 +178,152 @@ h2 {
 /*a {
   color:inherit;
   text-decoration: none;
-}*/
+  }*/
 
-h4 {
-  font-size: 16px;
-  font-color: #565a5c;
-}
-
-.card-img-top {
-  max-width: 260px;
-}
-
-.card-text{
-  opacity: 0.9;
-  font-color: white;
-  background-color: white;
-  width: 60px;
-  height: 30px;
-  top: 200px;
-  left: 5px;
-  position: absolute;
-}
-
-.dropdown-toggle:after {
-  display: none;
-}
-
-.btn-group, .btn-group-vertical {
-  display: none;
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  width: 20px;
-  height: 20px;
-}
-
-.btn .caret, .btn-group>.btn:first-child {
-  margin-left: 0; 
-}
-
-.add_restaurant_form{
-  list-style-type: none;
-}
-
-.card-block{
-  width:301px;
-}
-
-.card-columns .card, .progress {
-  width: 401px;
-}
-
-.card-img-top {
-  max-width: 401px;
-  max-height: 267.25px;
-  position: relative;
-}
-
-img {
-  width: 350px;
-  height: 267px;
-  border: 20px;
-  border-color: white;
-}
-
-.profile_photo_owner{
-  width: 56px;
-  height:56px;
-  border-radius: 75px;
-  border-style: solid;
-  border-width: 30px;
-  background-color: white;
-  border: 2px solid white;
-  position: absolute;
-  top: 235px;
-  right: 60px;
-}
-
-.sidebar-nav {
-  padding: 9px 0;
-}
-
-.dropdown-menu .sub-menu {
-  left: 100%;
-  position: absolute;
-  top: 0;
-  background: white;
-  margin-top: -1px;
-}
-
-.dropdown-menu li:hover .sub-menu {
-  visibility: visible;
-  background: white;
-}
-
-.dropdown:hover .dropdown-menu {
-  display: block;
-  background: white;
-}
-
-.nav-tabs .dropdown-menu, 
-.nav-pills .dropdown-menu, 
-.navbar .dropdown-menu {
-  margin-top: 0;
-  background: white;
-}
+  h4 {
+    font-size: 16px;
+    font-color: #565a5c;
+  }
 
 
-/*******************************************************************************/
-/* Navbar */
+  .card-text{
+    opacity: 0.9;
+    font-color: white;
+    background-color: white;
+    width: 60px;
+    height: 30px;
+    top: 200px;
+    left: 5px;
+    position: absolute;
+  }
 
-.navbar {
-  border-bottom: 0px solid #000;
-}
+  .dropdown-toggle:after {
+    display: none;
+  }
 
-/*.navbar .sub-menu:before {
-  border-bottom: 7px solid transparent;
-  border-left: none;
-  border-right: 7px solid rgba(0, 0, 0, 0.2);
-  border-top: 7px solid transparent;
-  left: -7px;
-  top: 10px;
-}
+  .btn-group, .btn-group-vertical {
+    display: none;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+  }
 
-.navbar .sub-menu:after {
-  border-top: 6px solid transparent;
-  border-left: none;
-  border-right: 6px solid #fff;
-  border-bottom: 6px solid transparent;
-  left: 10px;
-  top: 11px;
-  left: -6px;
-}*/
+  .btn .caret, .btn-group>.btn:first-child {
+    margin-left: 0; 
+  }
 
-.navbar-nav .nav-link{
-  display: inline-block;
-  float: right;
-  margin-left: 20px;
-}
+  .add_restaurant_form{
+    list-style-type: none;
+  }
 
-.profile_photo {
-  width: 45px;
-  height: 45px;
-  border-radius: 100%;
-  margin-bottom: 10px;
-  position: relative;
-  top: 0px;
-}
+  // .card-block{
+  //   width:301px;
+  // }
 
-.dropdown-menu {
-  text-align: right;
-  background: transparent;
-  border: none;
-}
+  // .card-columns .card, .progress {
+  //   width: 401px;
+  // }
+
+  // .card-img-top {
+  //   max-width: 401px;
+  //   max-height: 267.25px;
+  //   position: relative;
+  // }
+
+  img {
+    width: 350px;
+    height: 267px;
+    border: 20px;
+    border-color: white;
+  }
+
+  .profile_photo_owner{
+    width: 56px;
+    height:56px;
+    border-radius: 75px;
+    border-style: solid;
+    border-width: 30px;
+    background-color: white;
+    border: 2px solid white;
+    position: absolute;
+    top: 235px;
+    right: 60px;
+  }
+
+  .sidebar-nav {
+    padding: 9px 0;
+  }
+
+  .dropdown-menu .sub-menu {
+    left: 100%;
+    position: absolute;
+    top: 0;
+    background: white;
+    margin-top: -1px;
+  }
+
+  .dropdown-menu li:hover .sub-menu {
+    visibility: visible;
+    background: white;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    background: white;
+  }
+
+  .nav-tabs .dropdown-menu, 
+  .nav-pills .dropdown-menu, 
+  .navbar .dropdown-menu {
+    margin-top: 0;
+    background: white;
+  }
+
+
+  /*******************************************************************************/
+  /* Navbar */
+
+  .navbar {
+    border-bottom: 0px solid #000;
+  }
+
+  .navbar-nav {
+    text-align: right;
+    height: 56px;
+    line-height: 56px;
+
+    li {
+      box-sizing: border-box;
+      height: 56px;
+      line-height: 56px;
+    }
+  }
+
+  .navbar-nav .nav-link{
+    display: inline-block;
+    margin-left: 20px;
+  }
+
+  .container, .container-fluid{
+    padding: 0px;
+  }
+
+  .profile_photo {
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    position: relative;
+    margin: 0 15px;
+  }
+
+  .dropdown-menu {
+    text-align: right;
+    background: transparent;
+    border: none;
+  }
+
+  .navbar-brand {
+    margin-left: 20px;
+  }
