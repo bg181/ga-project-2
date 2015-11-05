@@ -4,7 +4,8 @@ class Restaurant < ActiveRecord::Base
   has_many :bookings
   belongs_to :user
 
-  mount_uploader :profile_photos, ProfilePhotosUploader
+  mount_uploader :picture, ProfilePhotosUploader
+  mount_uploader :picture_2, ProfilePhotosUploader
   
   # geocoded_by :full_street_address
   # after_validation :geocode

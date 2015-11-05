@@ -4,17 +4,17 @@
 <li class="restaurant_info">
 <div class= "restaurant_info_inside">
 <h2 class ="restaurant_title"><%= @restaurant.name %></h2>
-<p class ="restaurant description"> <%= @restaurant.description %></p>
 <p class ="restaurant price"> <%= @restaurant.price %></p>
 <p class ="Show bookings"> <%= link_to "Show all bookings", restaurant_bookings_path(@restaurant) %></p>
 <p class="Add button"> <%= link_to "Add booking", new_restaurant_booking_path(@restaurant) %></p>
 
-<table width="980" style="width:300px;border-width:0px;">
+<table class="timetable" width="980" style="width:300px;border-width:0px;">
 <tr>
 <td width="109" style="width:93px;border-width:0px;text-align:left;">
 <table style="width:182px; border-width:0px;">
 <tr>
-<td style="width:169px;border-width:0px;">Opening Hours</td>
+<td style="width:169px;border-width:0px;">Typical Opening Hours 
+<h5>Our Kitchen is available outside these times</h5></td>
 </tr>
 </table>
 <br>
@@ -28,19 +28,23 @@ Saturday</h4>
 <td width="179" style="width:104px;border-width:0px;float:left;margin-top: 13px;">
 <table style="width:104px;border-width:0px;"></table>
 <br>
-<h4>9am - 5pm<br>
-9am - 5pm<br>
-9am - 5pm<br>
-9am - 5pm<br>
-9am - 5pm<br>
-9am - 5pm</h4>
+<h4><%=@restaurant.monday_open%>am - <%=@restaurant.monday_close%>pm<br>
+<%=@restaurant.tuesday_open%>am - <%=@restaurant.tuesday_close%>pm<br>
+<%=@restaurant.wednesday_open%>am - <%=@restaurant.wednesday_close%>pm<br>
+<%=@restaurant.thursday_open%>am - <%=@restaurant.thursday_close%>pm<br>
+<%=@restaurant.friday_open%>am - <%=@restaurant.friday_close%>pm<br>
+<%=@restaurant.saturday_open%>am - <%=@restaurant.saturday_close%>pm<br>
+<%=@restaurant.sunday_open%>am - <%=@restaurant.sunday_close%>pm<br>
+</h4>
 </td>
 </tr>
 </table>
-
-
 <% if current_user %>
   <% if current_user.id == @restaurant.user_id %>
+  </div>
+  <li><%= image_tag @restaurant.picture_2, class: "gui2" %></li>
+  <p class="Add button"> <%= link_to "Add booking", new_restaurant_booking_path(@restaurant) %></p>
+  <p class ="restaurant description"> <%= @restaurant.description %></p>
     <p class= "Delete button"><%= link_to "Delete", restaurant_path(@restaurant), data: { confirm: 'Are you sure?' }, method: :delete %></p>
     <p class= "Edit button"><%= link_to "Edit", edit_restaurant_path(@restaurant) %></p>
     </div>

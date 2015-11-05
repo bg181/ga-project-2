@@ -10,6 +10,8 @@
   <%= f.text_field 'description', placeholder: 'Description'%>
   <li> <%= f.label 'picture', 'Picture' %></li>
    <%= f.file_field 'picture', placeholder: 'Picture'%>
+   <li> <%= f.label 'picture_2', 'Picture_2' %></li>
+    <%= f.file_field 'picture_2', placeholder: 'Picture_2'%>
    </ul>
    </div>
   <hr>
@@ -29,50 +31,58 @@
   <%= f.text_field 'postcode', placeholder: 'Postcode'%>
   <hr>
   </ul>
+  </div>
 
   <div>
   <ul class="opening_times">
-  <li> Address</li>
+  <li> opening_times</li>
   <hr>
-  <li> <%= f.label 'monday_open', 'Monday_open' %></li>
-  <%= f.text_field 'monday_open', placeholder: 'Monday_open'%>
-  <li> <%= f.label 'tuesday_open', 'tuesday_open' %></li>
-  <%= f.text_field 'tuesday_open', placeholder: 'tuesday_open'%>
-  <li> <%= f.label 'wednesday_open', 'Wednesday_open' %></li>
-  <%= f.text_field 'wednesday_open', placeholder: 'Wednesday_open'%>
-  <li> <%= f.label 'thursday_open', 'Thursday_open' %></li>
-  <%= f.text_field 'thursday_open', placeholder: 'Thursday_open'%>
-  <li> <%= f.label 'friday_open', 'Friday_open' %></li>
-  <%= f.text_field 'friday_open', placeholder: 'Friday_open'%>
-  <li> <%= f.label 'saturday_open', 'Saturday_open' %></li>
-  <%= f.text_field 'saturday_open', placeholder: 'Saturday_open'%>
-  <li> <%= f.label 'sunday_open', 'Sunday_open' %></li>
-  <%= f.text_field 'sunday_open', placeholder: 'Sunday_open'%>
+  <li> <%= f.label 'monday_open', 'Monday' %></li>
+  <%= f.time_field 'monday_open', placeholder: 'Monday_open'%>
+  <li> <%= f.label 'tuesday_open', 'Tuesday' %></li>
+  <%= f.time_field 'tuesday_open', placeholder: 'tuesday_open'%>
+  <li> <%= f.label 'wednesday_open', 'Wednesday' %></li>
+  <%= f.time_field 'wednesday_open', placeholder: 'Wednesday_open'%>
+  <li> <%= f.label 'thursday_open', 'Thursday' %></li>
+  <%= f.time_field 'thursday_open', placeholder: 'Thursday_open'%>
+  <li> <%= f.label 'friday_open', 'Friday' %></li>
+  <%= f.time_field 'friday_open', placeholder: 'Friday_open'%>
+  <li> <%= f.label 'saturday_open', 'Saturday' %></li>
+  <%= f.time_field 'saturday_open', placeholder: 'Saturday_open'%>
+  <li> <%= f.label 'sunday_open', 'Sunday' %></li>
+  <%= f.time_field 'sunday_open', placeholder: 'Sunday_open'%>
   <hr>
   </ul>
-
-
-
   </div>
+
+  <div>
+  <ul class="closing_times">
+  <li> closing_times</li>
+  <hr>
+  <li> <%= f.label 'monday_close', 'Monday' %></li>
+  <%= f.time_field 'monday_close', placeholder: 'Monday_close'%>
+  <li> <%= f.label 'tuesday_close', 'Tuesday' %></li>
+  <%= f.time_field 'tuesday_close', placeholder: 'tuesday_close'%>
+  <li> <%= f.label 'wednesday_close', 'Wednesday' %></li>
+  <%= f.time_field 'wednesday_close', placeholder: 'Wednesday_close'%>
+  <li> <%= f.label 'thursday_close', 'Thursday' %></li>
+  <%= f.time_field 'thursday_close', placeholder: 'Thursday_close'%>
+  <li> <%= f.label 'friday_close', 'Friday' %></li>
+  <%= f.time_field 'friday_close', placeholder: 'Friday_close'%>
+  <li> <%= f.label 'saturday_close', 'Saturday' %></li>
+  <%= f.time_field 'saturday_close', placeholder: 'Saturday_close'%>
+  <li> <%= f.label 'sunday_close', 'Sunday' %></li>
+  <%= f.time_field 'sunday_close', placeholder: 'Sunday_close'%>
+  <hr>
+  </ul>
+  </div>
+
+
+
 <div>
   <li><%= f.submit 'Submit' %></li>
 </div>
 <% end %>
-
-
-t.time    "monday_open"
-t.time    "monday_close"
-t.time    "tuesday_open"
-t.time    "tuesday_close"
-t.time    "wednesday_open"
-t.time    "wednesday_close"
-t.time    "thursday_open"
-t.time    "thursday_close"
-t.time    "friday_open"
-t.time    "friday_close"
-t.time    "saturday_open"
-t.time    "saturday_close"
-t.time    "sunday_open"
 
 
 

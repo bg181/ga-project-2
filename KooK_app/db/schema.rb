@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151105105733) do
+ActiveRecord::Schema.define(version: 20151105120919) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,6 +51,8 @@ ActiveRecord::Schema.define(version: 20151105105733) do
     t.time    "saturday_open"
     t.time    "saturday_close"
     t.time    "sunday_open"
+    t.time    "sunday_close"
+    t.string  "picture_2"
   end
 
   add_index "restaurants", ["user_id"], name: "index_restaurants_on_user_id", using: :btree
