@@ -1,15 +1,15 @@
 <nav class="container navbar navbar-light bg-faded">
   <%= link_to "Prep", root_path, class: "navbar-brand" %>
   <ul class="nav navbar-nav">
-    <li class="nav-item">
+    <li class="browse_spaces">
       <%= link_to "Browse Spaces", restaurants_path, class: "nav-link" %>
     </li>
     <% if user_signed_in? %>
-    <li class="nav-item">
+    <li class="list_spaces">
       <%= link_to "List Spaces", new_restaurant_path, class: "nav-link" %>
     </li>
 
-    <li class="pull-right nav-item dropdown">
+    <li class="nav-link" class="pull-right nav-item dropdown">
       <%= link_to current_user, class: "dropdown-toggle" do %>
         <%= image_tag current_user.image, class: "profile_photo" %> 
       <% end %>

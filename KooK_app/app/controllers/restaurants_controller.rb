@@ -1,7 +1,9 @@
 class RestaurantsController < ApplicationController
 
+
   def index
     @restaurants = Restaurant.all
+    @restaurants = Restaurant.all.page(params[:page]).per(18)
   end
 
   def new
@@ -48,7 +50,7 @@ class RestaurantsController < ApplicationController
   private
 
     def restaurant_params
-      params.require(:restaurant).permit(:name, :description, :price, :picture, :picture_2, :street_number, :street_name, :city, :country, :postcode, :monday_open, :moday_close, :tuesday_open, :tuesday_close, :wednesday_open, :wednesday_close, :thursday_open, :thursday_close, :friday_open, :friday_close, :saturday_open, :saturday_close, :sunday_open, :sunday_close)
+      params.require(:restaurant).permit(:name, :description, :price, :picture, :picture_2, :street_number, :street_name, :city, :country, :postcode, :monday_open, :moday_close, :tuesday_open, :tuesday_close, :wednesday_open, :wednesday_close, :thursday_open, :thursday_close, :friday_open, :friday_close, :saturday_open, :saturday_close, :sunday_open, :sunday_close, :latitude, :longitude, :address)
     end
 
 

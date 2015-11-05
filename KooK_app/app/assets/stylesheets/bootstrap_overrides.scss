@@ -11,6 +11,44 @@ html {
   color: f5f5f5;
 }
 
+a {
+  color: black;
+}
+
+.dropdown-menu{
+  background: white;
+}
+
+.card-deck{
+  width: 350px;
+}
+
+.main-container{
+  width: 110%;
+  padding: 0%;
+  margin: 0%;
+}
+.navbar-nav .nav-item {
+    right: 50px;
+    top: -60px;
+}
+
+.pull-right nav-item.dropdown{
+  right: 200px;
+}
+
+.nav-item{
+}
+
+.closing_times{
+float: left;
+display: inline-block;
+}
+.opening_times{
+float: left;
+display: inline-block;
+}
+
 .restaurant_info_inside {
   top: 1000px;
 }
@@ -78,11 +116,16 @@ nav {
 
 .card {
   border: none;
+  width: 350px;
+}
+
+.card-deck {
+  border: none;
+  width: 350px;
 }
 
 .profile_photo_owner_show {
-  margin-left: 150px;
-  margin-top: 580px;
+  left: 50px;
   width: 90px;
   height:90px;
   position: absolute;
@@ -210,22 +253,25 @@ img {
   left: 100%;
   position: absolute;
   top: 0;
-  visibility: hidden;
+  background: white;
   margin-top: -1px;
 }
 
 .dropdown-menu li:hover .sub-menu {
   visibility: visible;
+  background: white;
 }
 
 .dropdown:hover .dropdown-menu {
   display: block;
+  background: white;
 }
 
 .nav-tabs .dropdown-menu, 
 .nav-pills .dropdown-menu, 
 .navbar .dropdown-menu {
   margin-top: 0;
+  background: white;
 }
 
 
@@ -233,7 +279,7 @@ img {
 /* Navbar */
 
 .navbar {
-  border-bottom: 1px solid #000;
+  border-bottom: 0px solid #000;
 }
 
 /*.navbar .sub-menu:before {
@@ -255,12 +301,19 @@ img {
   left: -6px;
 }*/
 
+.navbar-nav .nav-link{
+  display: inline-block;
+  float: right;
+  margin-left: 20px;
+}
 
 .profile_photo {
   width: 45px;
   height: 45px;
   border-radius: 100%;
   margin-bottom: 10px;
+  position: relative;
+  top: 0px;
 }
 
 .dropdown-menu {
