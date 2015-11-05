@@ -1,9 +1,9 @@
 $(document).ready(function(){
-  calendar();
+  if ($("#calendar").length > 0) calendar();
 });
 
 $(document).on('page:load', function() {
-  calendar();
+  if ($("#calendar").length > 0) calendar();
 });
 
 

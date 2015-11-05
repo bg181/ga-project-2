@@ -1,12 +1,16 @@
 class UsersController < ApplicationController
   load_and_authorize_resource
 
+  def user
+    @users = User.all
+  end
+
   def show
-    # @article is already loaded and authorized
+    @user = User.find(params[:id])
   end
 
   def user_params
-    params.require(:user).permit(:profile_photos)
+    params.require(:user).permit(:image)
   end
 
 end

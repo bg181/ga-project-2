@@ -4,13 +4,12 @@
     <div class="card-deck">
       <% @restaurants.each do |restaurant| %>
         <div class="card">
-          <%= image_tag restaurant.picture, class: "card-img-top"  %>
+          <%= image_tag restaurant.picture.url, class: "card-img-top"  %>
           <div class="card-block">
             <h4 class="card-tag-line"><%= link_to restaurant.name, restaurant %></h4>
             <p class="card-text">£<%=restaurant.price%></p>
-            <%= image_tag restaurant.user.profile_photos.thumb, class: "profile_photo_owner" %>
+            <%= image_tag restaurant.user.image.thumb, class: "profile_photo_owner" %>
           </div>
-
         </div>
       <% end %>
     </div>

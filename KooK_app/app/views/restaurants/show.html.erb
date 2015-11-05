@@ -28,13 +28,13 @@ Saturday</h4>
 <td width="179" style="width:104px;border-width:0px;float:left;margin-top: 13px;">
 <table style="width:104px;border-width:0px;"></table>
 <br>
-<h4><%=@restaurant.monday_open%>am - <%=@restaurant.monday_close%>pm<br>
-<%=@restaurant.tuesday_open%>am - <%=@restaurant.tuesday_close%>pm<br>
-<%=@restaurant.wednesday_open%>am - <%=@restaurant.wednesday_close%>pm<br>
-<%=@restaurant.thursday_open%>am - <%=@restaurant.thursday_close%>pm<br>
-<%=@restaurant.friday_open%>am - <%=@restaurant.friday_close%>pm<br>
-<%=@restaurant.saturday_open%>am - <%=@restaurant.saturday_close%>pm<br>
-<%=@restaurant.sunday_open%>am - <%=@restaurant.sunday_close%>pm<br>
+<h4><%=@restaurant.monday_open.try(:strftime, '%H') %>am - <%=@restaurant.monday_close.try(:strftime, '%H') %>pm<br>
+<%=@restaurant.tuesday_open.try(:strftime, '%H') %>am - <strong><%=@restaurant.tuesday_close.try(:strftime, '%H')%>pm</strong><br>
+<%=@restaurant.wednesday_open.try(:strftime, '%H') %>am - <%=@restaurant.wednesday_close.try(:strftime, '%H') %>pm<br>
+<%=@restaurant.thursday_open.try(:strftime, '%H') %>am - <%=@restaurant.thursday_close.try(:strftime, '%H') %>pm<br>
+<%=@restaurant.friday_open.try(:strftime, '%H') %>am - <%=@restaurant.friday_close.try(:strftime, '%H') %>pm<br>
+<%=@restaurant.saturday_open.try(:strftime, '%H') %>am - <%=@restaurant.saturday_close.try(:strftime, '%H') %>pm<br>
+<%=@restaurant.sunday_open.try(:strftime, '%H') %>am - <%=@restaurant.sunday_close.try(:strftime, '%H') %>pm<br>
 </h4>
 </td>
 </tr>

@@ -11,11 +11,11 @@
     <%= render "navigation" %>
   </header>
 
-<% flash.each do |name, message| %>
-  <div class="flash-message flash-message-<%= name %>">
-    <%= message %>
-  </div>
-<% end %>
+  <% flash.each do |name, message| %>
+    <div class="container flash-message flash-message-<%= name %>">
+      <%= message %>
+    </div>
+  <% end %>
 
 <main class="container">
   <%= yield %>

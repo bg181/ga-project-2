@@ -6,6 +6,6 @@ class User < ActiveRecord::Base
 
   has_many :restaurants
 
-  mount_uploader :profile_photos, ProfilePhotosUploader
+  mount_uploader :image, ProfilePhotosUploader
 
 end
