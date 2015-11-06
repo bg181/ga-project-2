@@ -12,7 +12,7 @@
     </ul>
     <%= paginate @restaurants %>
   </div>
-  <div style="width:40%; position: fixed; right: 0px;" class="small-6 medium-6 large-6 columns">
+  <div style="width:40%; padding: 0px; position: fixed; right: 0px;" class="small-6 medium-6 large-6 columns">
     <div style="width:100%; position:fixed; right: 0;" id="indexMap"></div>
   </div>
 </div>
@@ -21,7 +21,7 @@
   var map;
   function initMap() {
     map = new google.maps.Map(document.getElementById('indexMap'), {
-      center: {lat: <%= @restaurants.first.latitude %>, lng: <%= @restaurants.first.longitude %>},
+      center: {lat: <%= 51.5088 %>, lng: <%= 0.1474 %>},
       zoom: 10
     });
   }

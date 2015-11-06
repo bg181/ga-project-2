@@ -1,9 +1,9 @@
-<li><%= image_tag @restaurant.picture, class: "gui" %></li>
+<li><%= image_tag @restaurant.picture.detail2, class: "gui" %></li>
 <%= image_tag @restaurant.user.try(:profile_photos), class: "profile_photo_owner_show" %>
 <li class="restaurant_info">
   <div class= "restaurant_info_inside">
     <h2 class ="restaurant_title"><%= @restaurant.name %></h2>
-    <p class ="restaurant price"> <%= @restaurant.price %></p>
+    <p class ="restaurant_show_price">£<%= @restaurant.price %></p>
     <p class ="Show bookings"> <%= link_to "Show all bookings", restaurant_bookings_path(@restaurant) %></p>
     <p class="Add button"> <%= link_to "Add booking", new_restaurant_booking_path(@restaurant) %></p>
 
@@ -16,32 +16,31 @@
                 <h5>Our Kitchen is available outside these times</h5></td>
               </tr>
             </table>
+            <div class="opening_hours">
             <br>
-            <h4>Monday<br>
+            <h4 class="days">Monday<br>
               Tuesday<br>
               Wednesday<br>
               Thursday<br>
               Friday<br>
               Saturday</h4>
             </td>
-            <td width="179" style="width:104px;border-width:0px;float:left;margin-top: 13px;">
-              <table style="width:104px;border-width:0px;"></table>
+            <td width="179" style="width:104px;border-width:0px;float:left;margin-top: 0px;">
+              <table class="hours_table" style="width:104px;border-width:0px;"></table>
               <br>
-              <h4><%=@restaurant.monday_open.try(:strftime, '%H') %>am - <%=@restaurant.monday_close.try(:strftime, '%H') %>pm<br>
-                <%=@restaurant.tuesday_open.try(:strftime, '%H') %>am - <strong><%=@restaurant.tuesday_close.try(:strftime, '%H')%>pm</strong><br>
+              <h4 class="times"><%=@restaurant.monday_open.try(:strftime, '%H') %>am - <%=@restaurant.monday_close.try(:strftime, '%H') %>pm<br>
+                <%=@restaurant.tuesday_open.try(:strftime, '%H') %>am - <%=@restaurant.tuesday_close.try(:strftime, '%H')%>pm</strong><br>
                 <%=@restaurant.wednesday_open.try(:strftime, '%H') %>am - <%=@restaurant.wednesday_close.try(:strftime, '%H') %>pm<br>
                 <%=@restaurant.thursday_open.try(:strftime, '%H') %>am - <%=@restaurant.thursday_close.try(:strftime, '%H') %>pm<br>
                 <%=@restaurant.friday_open.try(:strftime, '%H') %>am - <%=@restaurant.friday_close.try(:strftime, '%H') %>pm<br>
                 <%=@restaurant.saturday_open.try(:strftime, '%H') %>am - <%=@restaurant.saturday_close.try(:strftime, '%H') %>pm<br>
                 <%=@restaurant.sunday_open.try(:strftime, '%H') %>am - <%=@restaurant.sunday_close.try(:strftime, '%H') %>pm<br>
               </h4>
-            </td>
-          </tr>
         </table>
         <% if current_user %>
         <% if current_user.id == @restaurant.user_id %>
       </div>
-      <li><%= image_tag @restaurant.picture_2, class: "gui2" %></li>
+      <li><%= image_tag @restaurant.picture_2.detail2, class: "gui2" %></li>
       <p class="Add button"> <%= link_to "Add booking", new_restaurant_booking_path(@restaurant) %></p>
       <p class ="restaurant description"> <%= @restaurant.description %></p>
       <p class= "Delete button"><%= link_to "Delete", restaurant_path(@restaurant), data: { confirm: 'Are you sure?' }, method: :delete %></p>

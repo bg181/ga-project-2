@@ -30,7 +30,7 @@ class PictureUploader < CarrierWave::Uploader::Base
 
   # Create different versions of your uploaded files:
   version :detail do
-    process :resize_to_fill => [407, 270]
+    process :resize_to_fill => [407, 290]
   end
 
   version :detail2 do
