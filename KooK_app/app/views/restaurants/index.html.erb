@@ -5,21 +5,9 @@
         <li>
           <%= image_tag restaurant.picture.detail, class: "card-img-top"  %>
           <h4><%= link_to restaurant.name, restaurant %></h4>
-          <p>£<%=restaurant.price%></p>
+          <div class="price">£<%=restaurant.price%></div>
           <%= image_tag restaurant.user.image.thumb, class: "profile_photo_owner" %>
         </li>
-        <script type="text/javascript">
-          var latLng = {lat: <%= restaurant.latitude %>, lng: <%= restaurant.longitude%>}
-          function markMarkers(){
-            marker = new google.maps.Marker({
-              position: latLng,
-              map: map,
-              title: 'Hello World!',
-              icon: "http://cdn.leafletjs.com/leaflet-0.4/images/marker-icon.png"
-            });
-          }
-          markMarkers()
-        </script>
       <% end %>
     </ul>
     <%= paginate @restaurants %>
@@ -40,4 +28,14 @@
 </script>
 <script async defer
 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClxb-Zn1rpl0SvSeqRNipsFNi_5syF-kQ&callback=initMap">
+
+  function markMarkers(){
+    marker = new google.maps.Marker({
+      position: latLng,
+      map: map,
+      title: 'Hello World!',
+      icon: "http://cdn.leafletjs.com/leaflet-0.4/images/marker-icon.png"
+    });
+  }
+  markMarkers()
 </script>

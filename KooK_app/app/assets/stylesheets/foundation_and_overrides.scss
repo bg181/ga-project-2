@@ -3,6 +3,15 @@
     width: 60%;
 }
 
+.price {
+    opacity: 0.8;
+    padding-left: 10px;
+    position: relative;
+    margin-top: -100px;
+    background-color: white;
+    width: 60px;
+}
+
 
 // Foundation by ZURB
 // foundation.zurb.com
@@ -1500,4 +1509,64 @@ $topbar-dropdown-link-bg: white; // $oil;
     margin: 0 0;
     margin-bottom: 0;
     max-width: 100%;
+}
+
+.profile_photo_owner {
+    border-radius: 100%;
+    border: 2px solid white;
+    margin-top: 0px;
+    margin-left: 330px;
+}
+
+.logged_in_user {
+    border-radius: 100%;
+    border: 2px solid white;
+    margin-top: 0px;
+    margin-left: 0px;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 13px;
+}
+
+a {
+  font-size: 16px;
+  padding: 10px;
+  color: #8C8C8C;
+}
+
+.list_spaces{
+    background-image: 'host_icon.png';
+    background-repeat: no-repeat;
+    content: "";
+    display: inline-block;
+    height: 18px;
+    margin-right: 10px;
+    position: relative;
+    width: 18px;
+}
+
+.host{
+  margin-top: 15px;
+  position: absolute;
+  right: 200px;
+  }
+
+.dropdown_link{
+  margin-top: 50px;
+  background-color: white;
+}
+
+.profile_photo_pop_up{
+  background-color: white;
+  background: white;
+}
+
+.logo{
+  height: 40px;
+  width: auto;
+}
+
+ul{
+  list-style-type: none;
 }
