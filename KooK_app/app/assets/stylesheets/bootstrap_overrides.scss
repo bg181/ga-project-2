@@ -1,329 +1,329 @@
-html {
-  font-family: sans-serif;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  font-size: 16px;
-  -webkit-tap-highlight-color: transparent;
-  height: 700px;
-  list-style-type: none;
-  color: f5f5f5;
-}
-
-table{
-  padding: 20px;
-}
-
-a {
-  color: black;
-}
-
-.profile_photo{
-  display: centre;
-}
-
-.dropdown-menu{
-  background: white;
-}
-
-// .card{
-//   padding-left: 20px;
+// html {
+//   font-family: sans-serif;
+//   -webkit-text-size-adjust: 100%;
+//   -ms-text-size-adjust: 100%;
+//   -webkit-box-sizing: border-box;
+//   box-sizing: border-box;
+//   font-size: 16px;
+//   -webkit-tap-highlight-color: transparent;
+//   height: 700px;
+//   list-style-type: none;
+//   color: f5f5f5;
 // }
 
-p.card-text{
-  left: 20px;
-}
+// table{
+//   padding: 20px;
+// }
 
-.card-deck {
-  display: table;
-  table-layout: fixed;
-  border-spacing: 0px;
-}
+// a {
+//   color: black;
+// }
 
-.main-container{
-  width: 110%;
-  padding: 0%;
-  margin: 0%;
-}
+// .profile_photo{
+//   display: centre;
+// }
 
-.pull-right nav-item.dropdown{
-  right: 200px;
-}
+// .dropdown-menu{
+//   background: white;
+// }
 
-.closing_times{
-  float: left;
-  display: inline-block;
-}
+// // .card{
+// //   padding-left: 20px;
+// // }
 
-.opening_times{
-  float: left;
-  display: inline-block;
-}
+// p.card-text{
+//   left: 20px;
+// }
 
-.restaurant_info_inside {
-  top: 1000px;
-}
+// .card-deck {
+//   display: table;
+//   table-layout: fixed;
+//   border-spacing: 0px;
+// }
 
-h5 {
-  font-size: 12px;
-  line-height: 18px;
-}
+// .main-container{
+//   width: 110%;
+//   padding: 0%;
+//   margin: 0%;
+// }
 
-input {
-  display:inline-block;
-}
+// .pull-right nav-item.dropdown{
+//   right: 200px;
+// }
 
-ul {
-  list-style: none;
-}
+// .closing_times{
+//   float: left;
+//   display: inline-block;
+// }
 
-.timetable{
-  margin-left: 500px;
-  margin-top: -450px;
-}
+// .opening_times{
+//   float: left;
+//   display: inline-block;
+// }
 
-.footerTable {
-  background-color:transparent;
-  border:none;
-  border-collapse:collapse;
-  color:#FFFFFF;
-  font-family:Mangal;
-  font-weight:bold;
-  position:relative;
-  max-width:100%;
-  margin-top:5px;
-}
+// .restaurant_info_inside {
+//   top: 1000px;
+// }
 
-.float {
-  display:block;
-  position:absolute;
-  top:7px;
-  margin-left:-2px;
-  background-color:transparent;
-  left: 6px;
-}
+// h5 {
+//   font-size: 12px;
+//   line-height: 18px;
+// }
 
-.logout_button {
-  font-style: black;
-}
+// input {
+//   display:inline-block;
+// }
 
-nav {
-  height: 65px;
-  color: white;
-}
+// ul {
+//   list-style: none;
+// }
 
-.bg-faded {
-  background-color: white;
-}
+// .timetable{
+//   margin-left: 500px;
+//   margin-top: -450px;
+// }
 
-.btn-group {
-  float: right;
-  margin-right: 110px;
-}
+// .footerTable {
+//   background-color:transparent;
+//   border:none;
+//   border-collapse:collapse;
+//   color:#FFFFFF;
+//   font-family:Mangal;
+//   font-weight:bold;
+//   position:relative;
+//   max-width:100%;
+//   margin-top:5px;
+// }
 
-.restaurant_title {
-  font-size: 24px;
-}
+// .float {
+//   display:block;
+//   position:absolute;
+//   top:7px;
+//   margin-left:-2px;
+//   background-color:transparent;
+//   left: 6px;
+// }
 
-.card {
-  border: none;
-}
+// .logout_button {
+//   font-style: black;
+// }
 
-.card-deck {
-  border: none;
-}
+// nav {
+//   height: 65px;
+//   color: white;
+// }
 
-.profile_photo_owner_show {
-  left: 50px;
-  width: 90px;
-  height:90px;
-  position: absolute;
-  border-radius: 90px;
-}
+// .bg-faded {
+//   background-color: white;
+// }
 
-.restaurant_info {
-  max-height: 500px;
-  height:400px;
-}
+// .btn-group {
+//   float: right;
+//   margin-right: 110px;
+// }
 
-.restaurant_info_inside {
-  position: absolute;
-  top: 650px;
-  margin-left: 270px;
-}
+// .restaurant_title {
+//   font-size: 24px;
+// }
 
-.gui {
-  position: absolute;
-  width:2000px;
-  height:550px;
-  left: 0px;
-  right: 0px;
-  margin-right: 0px;
-}
+// .card {
+//   border: none;
+// }
 
-.gui2 {
-  position: absolute;
-  width:2000px;
-  height:550px;
-  top: 980px;
-  right: 0px;
-  margin-right: 0px;
-}
+// .card-deck {
+//   border: none;
+// }
 
-h2 {  
-  list-style-type: none;
-}
+// .profile_photo_owner_show {
+//   left: 50px;
+//   width: 90px;
+//   height:90px;
+//   position: absolute;
+//   border-radius: 90px;
+// }
 
-/*a {
-  color:inherit;
-  text-decoration: none;
-  }*/
+// .restaurant_info {
+//   max-height: 500px;
+//   height:400px;
+// }
 
-  h4 {
-    font-size: 16px;
-    font-color: #565a5c;
-  }
+// .restaurant_info_inside {
+//   position: absolute;
+//   top: 650px;
+//   margin-left: 270px;
+// }
 
+// .gui {
+//   position: absolute;
+//   width:2000px;
+//   height:550px;
+//   left: 0px;
+//   right: 0px;
+//   margin-right: 0px;
+// }
 
-  .card-text{
-    opacity: 0.9;
-    font-color: white;
-    background-color: white;
-    width: 60px;
-    height: 30px;
-    top: 200px;
-    left: 5px;
-    position: absolute;
-  }
+// .gui2 {
+//   position: absolute;
+//   width:2000px;
+//   height:550px;
+//   top: 980px;
+//   right: 0px;
+//   margin-right: 0px;
+// }
 
-  .dropdown-toggle:after {
-    display: none;
-  }
+// h2 {  
+//   list-style-type: none;
+// }
 
-  .btn-group, .btn-group-vertical {
-    display: none;
-    position: relative;
-    display: inline-block;
-    vertical-align: middle;
-    width: 20px;
-    height: 20px;
-  }
+// /*a {
+//   color:inherit;
+//   text-decoration: none;
+//   }*/
 
-  .btn .caret, .btn-group>.btn:first-child {
-    margin-left: 0; 
-  }
-
-  .add_restaurant_form{
-    list-style-type: none;
-  }
-
-  // .card-block{
-  //   width:301px;
-  // }
-
-  // .card-columns .card, .progress {
-  //   width: 401px;
-  // }
-
-  // .card-img-top {
-  //   max-width: 401px;
-  //   max-height: 267.25px;
-  //   position: relative;
-  // }
-
-  img {
-    width: 350px;
-    height: 267px;
-    border: 20px;
-    border-color: white;
-  }
-
-  .profile_photo_owner{
-    width: 56px;
-    height:56px;
-    border-radius: 75px;
-    border-style: solid;
-    border-width: 30px;
-    background-color: white;
-    border: 2px solid white;
-    position: absolute;
-    top: 235px;
-    right: 60px;
-  }
-
-  .sidebar-nav {
-    padding: 9px 0;
-  }
-
-  .dropdown-menu .sub-menu {
-    left: 100%;
-    position: absolute;
-    top: 0;
-    background: white;
-    margin-top: -1px;
-  }
-
-  .dropdown-menu li:hover .sub-menu {
-    visibility: visible;
-    background: white;
-  }
-
-  .dropdown:hover .dropdown-menu {
-    display: block;
-    background: white;
-  }
-
-  .nav-tabs .dropdown-menu, 
-  .nav-pills .dropdown-menu, 
-  .navbar .dropdown-menu {
-    margin-top: 0;
-    background: white;
-  }
+//   h4 {
+//     font-size: 16px;
+//     font-color: #565a5c;
+//   }
 
 
-  /*******************************************************************************/
-  /* Navbar */
+//   .card-text{
+//     opacity: 0.9;
+//     font-color: white;
+//     background-color: white;
+//     width: 60px;
+//     height: 30px;
+//     top: 200px;
+//     left: 5px;
+//     position: absolute;
+//   }
 
-  .navbar {
-    border-bottom: 0px solid #000;
-  }
+//   .dropdown-toggle:after {
+//     display: none;
+//   }
 
-  .navbar-nav {
-    text-align: right;
-    height: 56px;
-    line-height: 56px;
+//   .btn-group, .btn-group-vertical {
+//     display: none;
+//     position: relative;
+//     display: inline-block;
+//     vertical-align: middle;
+//     width: 20px;
+//     height: 20px;
+//   }
 
-    li {
-      box-sizing: border-box;
-      height: 56px;
-      line-height: 56px;
-    }
-  }
+//   .btn .caret, .btn-group>.btn:first-child {
+//     margin-left: 0; 
+//   }
 
-  .navbar-nav .nav-link{
-    display: inline-block;
-    margin-left: 20px;
-  }
+//   .add_restaurant_form{
+//     list-style-type: none;
+//   }
 
-  .container, .container-fluid{
-    padding: 0px;
-  }
+//   // .card-block{
+//   //   width:301px;
+//   // }
 
-  .profile_photo {
-    width: 45px;
-    height: 45px;
-    border-radius: 100%;
-    position: relative;
-    margin: 0 15px;
-  }
+//   // .card-columns .card, .progress {
+//   //   width: 401px;
+//   // }
 
-  .dropdown-menu {
-    text-align: right;
-    background: transparent;
-    border: none;
-  }
+//   // .card-img-top {
+//   //   max-width: 401px;
+//   //   max-height: 267.25px;
+//   //   position: relative;
+//   // }
 
-  .navbar-brand {
-    margin-left: 20px;
-  }
+//   img {
+//     width: 350px;
+//     height: 267px;
+//     border: 20px;
+//     border-color: white;
+//   }
+
+//   .profile_photo_owner{
+//     width: 56px;
+//     height:56px;
+//     border-radius: 75px;
+//     border-style: solid;
+//     border-width: 30px;
+//     background-color: white;
+//     border: 2px solid white;
+//     position: absolute;
+//     top: 235px;
+//     right: 60px;
+//   }
+
+//   .sidebar-nav {
+//     padding: 9px 0;
+//   }
+
+//   .dropdown-menu .sub-menu {
+//     left: 100%;
+//     position: absolute;
+//     top: 0;
+//     background: white;
+//     margin-top: -1px;
+//   }
+
+//   .dropdown-menu li:hover .sub-menu {
+//     visibility: visible;
+//     background: white;
+//   }
+
+//   .dropdown:hover .dropdown-menu {
+//     display: block;
+//     background: white;
+//   }
+
+//   .nav-tabs .dropdown-menu, 
+//   .nav-pills .dropdown-menu, 
+//   .navbar .dropdown-menu {
+//     margin-top: 0;
+//     background: white;
+//   }
+
+
+//   /*******************************************************************************/
+//   /* Navbar */
+
+//   .navbar {
+//     border-bottom: 0px solid #000;
+//   }
+
+//   .navbar-nav {
+//     text-align: right;
+//     height: 56px;
+//     line-height: 56px;
+
+//     li {
+//       box-sizing: border-box;
+//       height: 56px;
+//       line-height: 56px;
+//     }
+//   }
+
+//   .navbar-nav .nav-link{
+//     display: inline-block;
+//     margin-left: 20px;
+//   }
+
+//   .container, .container-fluid{
+//     padding: 0px;
+//   }
+
+//   .profile_photo {
+//     width: 45px;
+//     height: 45px;
+//     border-radius: 100%;
+//     position: relative;
+//     margin: 0 15px;
+//   }
+
+//   .dropdown-menu {
+//     text-align: right;
+//     background: transparent;
+//     border: none;
+//   }
+
+//   .navbar-brand {
+//     margin-left: 20px;
+//   }

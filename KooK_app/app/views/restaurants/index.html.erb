@@ -1,9 +1,9 @@
 <div class="row-fluid">
-  <div class="small-6 medium-6 large-6 columns">
-    <ul class="small-block-grid-2 medium-block-grid-2 large-block-grid-3">
+  <div style="width:60%;" class="small-8 medium-8 large-8 columns">
+    <ul class="small-block-grid-2 medium-block-grid-2 large-block-grid-2">
       <% @restaurants.each do |restaurant| %>
         <li>
-          <%= image_tag restaurant.picture.url, class: "card-img-top"  %>
+          <%= image_tag restaurant.picture.detail, class: "card-img-top"  %>
           <h4><%= link_to restaurant.name, restaurant %></h4>
           <p>£<%=restaurant.price%></p>
           <%= image_tag restaurant.user.image.thumb, class: "profile_photo_owner" %>
@@ -24,7 +24,7 @@
     </ul>
     <%= paginate @restaurants %>
   </div>
-  <div class="small-6 medium-6 large-6 columns">
+  <div style="width:40%; position: fixed; right: 0px;" class="small-6 medium-6 large-6 columns">
     <div style="width:100%; position:fixed; right: 0;" id="indexMap"></div>
   </div>
 </div>
